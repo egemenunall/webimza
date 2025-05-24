@@ -2,13 +2,60 @@
 
 :root {
   --foreground-rgb: 51, 51, 51;
-  --background-rgb: 255, 255, 255;
+  --background-rgb: 226, 218, 214;
+  --primary-rgb: 100, 130, 173;
+  --secondary-rgb: 127, 161, 195;
+  --neutral-rgb: 226, 218, 214;
+  --light-rgb: 255, 255, 255;
+}
+
+.text-primary {
+  color: #6482AD !important;
+}
+
+.bg-primary {
+  background-color: #6482AD !important;
+}
+
+.hover\:bg-primary:hover {
+  background-color: #6482AD !important;
+}
+
+.hover\:text-primary:hover {
+  color: #6482AD !important;
+}
+
+.bg-secondary {
+  background-color: #7FA1C3 !important;
+}
+
+.hover\:bg-secondary:hover {
+  background-color: #7FA1C3 !important;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Özel scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(var(--neutral-rgb), 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--primary-rgb), 0.6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--primary-rgb), 0.8);
 }
 
 /* Container */
@@ -46,5 +93,70 @@ a, button {
 
 .shadow-lg {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+}
+
+/* Hareketli arka plan */
+.bg-animated {
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05), rgba(var(--secondary-rgb), 0.1), rgba(var(--neutral-rgb), 0.05));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Renk sınıfları için utility sınıfları */
+.bg-primary\/10 {
+  background-color: rgba(100, 130, 173, 0.1) !important;
+}
+
+.bg-primary\/20 {
+  background-color: rgba(100, 130, 173, 0.2) !important;
+}
+
+.bg-secondary\/10 {
+  background-color: rgba(127, 161, 195, 0.1) !important;
+}
+
+.bg-secondary\/20 {
+  background-color: rgba(127, 161, 195, 0.2) !important;
+}
+
+.border-primary {
+  border-color: #6482AD !important;
+}
+
+.hover\:border-primary:hover {
+  border-color: #6482AD !important;
+}
+
+/* Ek yardımcı sınıflar */
+.text-light {
+  color: #FFFFFF !important;
+}
+
+.bg-light {
+  background-color: #FFFFFF !important;
+}
+
+.hover\:bg-light:hover {
+  background-color: #FFFFFF !important;
+}
+
+.text-neutral {
+  color: #333333 !important;
+}
+
+.text-primary\/70 {
+  color: rgba(100, 130, 173, 0.7) !important;
 }
 

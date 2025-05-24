@@ -39,10 +39,10 @@ export default function ScrollToTop() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 left-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-colors z-50"
+          className="fixed bottom-6 left-6 bg-gray-900 text-white p-3 rounded-md border-2 border-gray-800 shadow-xl hover:bg-gray-800 transition-all duration-200 z-50"
           aria-label="Yukarı Çık"
         >
-          <FaArrowUp />
+          <FaArrowUp className="text-lg" />
         </motion.button>
       )}
     </AnimatePresence>

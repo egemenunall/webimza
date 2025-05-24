@@ -9,7 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#3B82F6", // Açık mavi vurgu rengi
+        primary: "#6482AD",
+        secondary: "#7FA1C3",
+        neutral: "#E2DAD6",
+        light: "#FFFFFF",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -19,6 +22,7 @@ const config: Config = {
     },
   },
   plugins: [],
+  important: true, // Tüm sınıfları önemli olarak işaretle (CSS önceliği için)
 };
 
 export default config; 

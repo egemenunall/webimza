@@ -1,0 +1,12 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Allow: /hizmetler
+Allow: /hakkimizda
+Allow: /neden-biz
+Allow: /iletisim
+Allow: /blog
+Allow: /blog/*
+
+# Sitenin tüm alanlarına erişime izin ver
+Sitemap: https://www.webimza.com/sitemap.xml 
