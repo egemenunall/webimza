@@ -34,7 +34,7 @@ export default function KVKKPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-primary mb-4" style={{ color: '#6482AD' }}>1. Giriş</h2>
             <p className="mb-4">
-              Webimza ("biz", "bizim" veya "şirketimiz") olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, veri sorumlusu sıfatıyla, kişisel verilerinizi aşağıda açıklanan amaçlar kapsamında hukuka ve dürüstlük kurallarına uygun olarak işleyebilecek, kaydedebilecek, saklayabilecek, sınıflandırabilecek, güncelleyebilecek ve mevzuatın izin verdiği hallerde üçüncü kişilere açıklayabilecek/aktarabileceğiz.
+              Webimza (&quot;biz&quot;, &quot;bizim&quot; veya &quot;şirketimiz&quot;) olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (&quot;KVKK&quot;) uyarınca, veri sorumlusu sıfatıyla, kişisel verilerinizi aşağıda açıklanan amaçlar kapsamında hukuka ve dürüstlük kurallarına uygun olarak işleyebilecek, kaydedebilecek, saklayabilecek, sınıflandırabilecek, güncelleyebilecek ve mevzuatın izin verdiği hallerde üçüncü kişilere açıklayabilecek/aktarabileceğiz.
             </p>
           </section>
 
@@ -95,7 +95,7 @@ export default function KVKKPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-primary mb-4" style={{ color: '#6482AD' }}>7. Haklarınız</h2>
             <p className="mb-4">
-              KVKK'nın 11. maddesi uyarınca, veri sahibi olarak aşağıdaki haklara sahipsiniz:
+              KVKK&apos;nın 11. maddesi uyarınca, veri sahibi olarak aşağıdaki haklara sahipsiniz:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
               <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
@@ -103,7 +103,7 @@ export default function KVKKPage() {
               <li>Kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme</li>
               <li>Yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme</li>
               <li>Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
-              <li>KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerinizin silinmesini veya yok edilmesini isteme</li>
+              <li>KVKK&apos;nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerinizin silinmesini veya yok edilmesini isteme</li>
               <li>Kişisel verilerinizin aktarıldığı üçüncü kişilere yukarıda belirtilen düzeltme, silme ve yok edilme bildiriminin yapılmasını isteme</li>
               <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin kendisi aleyhine bir sonucun ortaya çıkmasına itiraz etme</li>
               <li>Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme</li>

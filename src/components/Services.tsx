@@ -1,6 +1,6 @@
 "use client";
 
-import { FaLaptopCode, FaWhatsapp, FaRobot, FaCode, FaInstagram, FaChartLine, FaBullseye, FaLightbulb } from 'react-icons/fa';
+import { FaLaptopCode, FaRobot, FaCode, FaInstagram, FaChartLine, FaBullseye } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 type ServiceProps = {
@@ -60,12 +60,20 @@ function ServiceCard({ icon, title, description, image, index }: ServiceProps) {
     'Düzenli güncelleme ve iyileştirmeler'
   ];
 
+  // image parametresini CSS backgroundImage olarak kullanıyoruz
+  const cardStyle = {
+    backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url(${image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
     <motion.div 
       className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden border border-neutral/10 h-full flex flex-col"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
+      style={cardStyle}
     >
       {/* Renk çizgisi */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>

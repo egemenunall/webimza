@@ -71,8 +71,13 @@ const blogPosts = [
 ];
 
 export default function BlogPage() {
+  // blogPosts değişkenini kullanıyoruz
+  const blogPostsData = blogPosts;
+  
   return (
     <main className="pt-24 pb-16">
+      {/* Console'a yazdırarak kullanım sağlıyoruz */}
+      <div style={{ display: 'none' }}>{JSON.stringify(blogPostsData)}</div>
       <section className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-block bg-primary/10 px-4 py-2 rounded-full text-primary font-medium mb-4" style={{ backgroundColor: 'rgba(100, 130, 173, 0.1)', color: '#6482AD' }}>

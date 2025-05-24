@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { CSSProperties } from 'react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -35,7 +36,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-primary transition-all"
                 aria-label="Instagram"
-                style={{ "--hover-text-color": "#6482AD" } as any}
+                style={{ "--hover-text-color": "#6482AD" } as CSSProperties}
               >
                 <FaInstagram className="text-lg" />
               </a>
@@ -45,7 +46,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-primary transition-all"
                 aria-label="Facebook"
-                style={{ "--hover-text-color": "#6482AD" } as any}
+                style={{ "--hover-text-color": "#6482AD" } as CSSProperties}
               >
                 <FaFacebookF className="text-lg" />
               </a>
@@ -55,7 +56,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-primary transition-all"
                 aria-label="R10"
-                style={{ "--hover-text-color": "#6482AD" } as any}
+                style={{ "--hover-text-color": "#6482AD" } as CSSProperties}
               >
                 <span className="font-bold text-sm">R10</span>
               </a>
