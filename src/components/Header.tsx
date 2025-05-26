@@ -9,6 +9,7 @@ import { CSSProperties } from 'react';
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [viewHeight, setViewHeight] = useState("100vh");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +25,28 @@ export default function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Mobil menü açıkken body'nin scrollunu devre dışı bırak
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      
+      // Ekran yüksekliğini al ve sabit tut
+      setViewHeight(`${window.innerHeight}px`);
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <header 
@@ -89,7 +112,7 @@ export default function Header() {
         </nav>
         
         <button 
-          className="block md:hidden p-2.5 rounded-full bg-primary text-white shadow-md z-50"
+          className="block md:hidden p-2.5 rounded-full bg-primary text-white shadow-md z-50 relative"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           style={{ backgroundColor: '#6482AD' }}
           aria-expanded={isMobileMenuOpen}
@@ -107,13 +130,19 @@ export default function Header() {
       </div>
 
       {isMobileMenuOpen && (
-        <motion.div 
-          className="fixed inset-0 bg-white z-40 md:hidden pt-24 pb-6 px-4 overflow-y-auto"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
+        <div 
+          className="fixed top-0 left-0 right-0 bottom-0 w-full bg-white z-40 md:hidden"
           id="mobile-menu"
           aria-label="Mobil Menü"
+          style={{ 
+            height: viewHeight,
+            position: 'fixed',
+            overflowY: 'auto',
+            paddingTop: '6rem',
+            paddingBottom: '2rem',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
         >
           <nav className="flex flex-col p-4 space-y-4" aria-label="Mobil Ana Menü">
             <Link 
@@ -184,7 +213,7 @@ export default function Header() {
               </button>
             </div>
           </nav>
-        </motion.div>
+        </div>
       )}
     </header>
   );

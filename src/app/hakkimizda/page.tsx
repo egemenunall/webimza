@@ -27,7 +27,7 @@ export default function HakkimizdaPage() {
         <h1 className="sr-only">Webimza Hakkında - Tarihçemiz, Vizyonumuz ve Değerlerimiz</h1>
         
         <section id="about-section" aria-labelledby="about-heading">
-          <About />
+        <About />
         </section>
         
         {/* Tarihçemiz */}

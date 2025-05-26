@@ -33,6 +33,32 @@ export default function ClientNavbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Mobil menü açıkken body scroll'unu engelle
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.body.style.top = `-${window.scrollY}px`;
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.top = '';
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      }
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.top = '';
+    };
+  }, [isMobileMenuOpen]);
   
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -66,7 +92,7 @@ export default function ClientNavbar() {
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary"
+            className="md:hidden flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary fixed top-4 right-4 z-50"
             style={{ backgroundColor: 'rgba(100, 130, 173, 0.1)', color: '#6482AD' }}
             aria-expanded={isMobileMenuOpen}
             aria-label="Mobil Menüyü Aç/Kapat"
@@ -83,33 +109,66 @@ export default function ClientNavbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <motion.div 
-          className="md:hidden fixed inset-0 top-20 bg-white/95 z-40 flex flex-col items-center pt-10"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.3 }}
+          className="md:hidden fixed inset-0 bg-white z-40 flex flex-col"
+          initial={{ opacity: 0, x: '100%' }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: '100%' }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
+          style={{ 
+            height: '100vh',
+            width: '100vw',
+            top: 0,
+            left: 0,
+            paddingTop: '1rem'
+          }}
         >
-          <nav className="flex flex-col items-center space-y-6 w-full px-4">
-            {mainNavItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-xl text-neutral-600 hover:text-primary font-medium transition-colors w-full text-center py-3 border-b border-neutral-100"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+          {/* Header alanı - mobil menüde logo */}
+          <div className="flex justify-start items-center px-6 py-6">
+            <Link 
+              href="/" 
+              className="text-2xl font-bold text-primary flex items-center" 
+              style={{ color: '#6482AD' }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span>Webimza</span>
+              <span className="inline-block w-2 h-2 rounded-full bg-primary ml-1" style={{ backgroundColor: '#6482AD' }}></span>
+            </Link>
+          </div>
+
+          {/* Menü içeriği */}
+          <nav className="flex-1 flex flex-col justify-start px-6 pt-8">
+            <div className="space-y-2">
+              {mainNavItems.map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.3 }}
+                >
+                  <Link
+                    href={item.href}
+                    className="block text-2xl text-neutral-700 hover:text-primary font-medium transition-colors py-4 px-4 rounded-lg hover:bg-neutral-50"
+                    style={{ '--hover-color': '#6482AD' } as React.CSSProperties}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
           </nav>
-          <button 
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-auto mb-10 bg-primary/10 text-primary font-medium rounded-full px-8 py-3 inline-flex items-center"
-            style={{ backgroundColor: 'rgba(100, 130, 173, 0.1)', color: '#6482AD' }}
-            aria-label="Mobil Menüyü Kapat"
-          >
-            <span>Kapat</span>
-            <XMarkIcon className="h-5 w-5 ml-2" />
-          </button>
+
+          {/* Alt kısım - iletişim butonu */}
+          <div className="px-6 pb-8">
+            <Link
+              href="/iletisim"
+              className="block w-full text-center bg-primary text-white font-medium rounded-full py-4 px-8 hover:bg-primary/90 transition-colors"
+              style={{ backgroundColor: '#6482AD' }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Hemen İletişime Geç
+            </Link>
+          </div>
         </motion.div>
       )}
     </header>

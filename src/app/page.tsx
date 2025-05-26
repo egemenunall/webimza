@@ -32,19 +32,19 @@ export default function Home() {
       <main id="main-content" className="flex-grow">
         <Hero />
         <section id="about-section" aria-labelledby="about-heading">
-          <About />
+        <About />
         </section>
         <section id="services-section" aria-labelledby="services-heading">
-          <Services />
+        <Services />
         </section>
         <section id="why-us-section" aria-labelledby="why-us-heading">
-          <WhyUs />
+        <WhyUs />
         </section>
         <section id="contact-section" aria-labelledby="contact-heading">
-          <Contact />
+        <Contact />
         </section>
         <section id="faq-section" aria-labelledby="faq-heading">
-          <FAQ />
+        <FAQ />
         </section>
         <section id="cta-section">
           <CallToAction />

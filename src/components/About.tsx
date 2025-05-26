@@ -26,11 +26,11 @@ export default function About() {
             </h2>
             <div className="prose prose-lg text-gray-600">
               <p className="text-lg mb-8">
-                Webimza, genç ve dinamik bir ekipten oluşan bir dijital ajanstır. Yenilikçi bakış açısına sahip ekibimizle, güncel teknolojileri yakından takip ederek işletmelere uygun fiyatlı, hızlı ve yaratıcı çözümler sunuyoruz.
-              </p>
+              Webimza, genç ve dinamik bir ekipten oluşan bir dijital ajanstır. Yenilikçi bakış açısına sahip ekibimizle, güncel teknolojileri yakından takip ederek işletmelere uygun fiyatlı, hızlı ve yaratıcı çözümler sunuyoruz.
+            </p>
               <p className="text-lg mb-8">
-                Web sitesi, akıllı iletişim çözümleri ve sosyal medya yönetimi gibi dijital ihtiyaçlarınızda yanınızdayız. Dinamik ekip ruhumuzla enerjik, yaratıcı ve ulaşılabilir bir hizmet anlayışı benimsiyoruz.
-              </p>
+              Web sitesi, akıllı iletişim çözümleri ve sosyal medya yönetimi gibi dijital ihtiyaçlarınızda yanınızdayız. Dinamik ekip ruhumuzla enerjik, yaratıcı ve ulaşılabilir bir hizmet anlayışı benimsiyoruz.
+            </p>
             </div>
             <ul className="flex flex-wrap gap-4 mt-8 list-none pl-0" aria-label="Hizmet avantajlarımız">
               <li className="flex items-center">

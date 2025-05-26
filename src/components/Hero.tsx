@@ -112,7 +112,7 @@ export default function Hero() {
                 <div className="relative w-full h-full">
                   <Image 
                     src="/hero3.png"
-                    alt="Dijital çözümler - sosyal medya ve pazarlama stratejileri"
+                    alt="E-ticaret çözümleri - online mağaza ve satış platformları"
                     fill
                     sizes="(max-width: 768px) 100vw, 25vw"
                     loading="lazy"
@@ -156,7 +156,7 @@ export default function Hero() {
                     <div className="relative w-full h-full">
                       <Image 
                         src="/hero3.png"
-                        alt="Dijital çözümler - sosyal medya ve pazarlama stratejileri"
+                        alt="E-ticaret çözümleri - online mağaza ve satış platformları"
                         fill
                         sizes="(max-width: 768px) 80vw, 0vw"
                         loading="lazy"

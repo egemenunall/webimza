@@ -17,24 +17,40 @@ export default function FAQ() {
 
   const faqItems: FAQItem[] = [
     {
-      question: "Web sitesi yaptırmak ne kadar sürer?",
-      answer: "Web sitesi projelerinin tamamlanma süresi, projenin karmaşıklığına, sayfa sayısına ve özel gereksinimlere bağlı olarak değişir. Basit bir kurumsal site genellikle 1-2 hafta içinde tamamlanabilirken, daha kapsamlı projeler 4-6 hafta sürebilir. Proje başlangıcında size net bir zaman çizelgesi sunuyoruz."
+      question: "Webimza nedir?",
+      answer: "Webimza, küçük ve orta ölçekli işletmelere özel, uygun maliyetli dijital çözümler sunan bir dijitalleştirme şirketidir. Web sitesi tasarımı, WhatsApp botu, sosyal medya yönetimi ve daha fazlasını sunar."
     },
     {
-      question: "Ödeme koşullarınız nelerdir?",
-      answer: "Projelerimizde genellikle %40 başlangıç ödemesi, %30 tasarım onayı sonrası ve %30 proje tesliminde olmak üzere üç aşamalı bir ödeme planı uyguluyoruz. Farklı bütçe ve ihtiyaçlara göre esnek ödeme seçenekleri de sunabiliyoruz."
+      question: "Web sitesi hizmetiniz neleri kapsıyor?",
+      answer: "Webimza'dan alacağınız web sitesi hizmeti; mobil uyumlu tasarım, hızlı yüklenme, temel SEO ayarları, işletme bilgileri entegrasyonu ve 1 yıl teknik destek içerir."
     },
     {
-      question: "WhatsApp botu ne işe yarar?",
-      answer: "WhatsApp botu, müşterilerinizle 7/24 otomatik iletişim kurmanızı sağlar. Sık sorulan sorulara anında yanıt verebilir, randevu oluşturabilir, sipariş alabilir ve müşteri desteği sağlayabilir. Bu sayede müşteri memnuniyetini artırırken operasyonel yükünüzü azaltabilirsiniz."
+      question: "WhatsApp botu nedir, ne işe yarar?",
+      answer: "WhatsApp botu, müşterilerinize otomatik olarak yanıt veren bir sistemdir. Sık sorulan soruları yanıtlar, ürün bilgisi verir, hatta rezervasyon ya da sipariş alabilir."
     },
     {
-      question: "Yaptığınız web sitesi mobil uyumlu olacak mı?",
-      answer: "Evet, tüm web sitelerimiz tamamen mobil uyumlu (responsive) olarak tasarlanmaktadır. Günümüzde internet trafiğinin büyük bir kısmı mobil cihazlardan geldiği için, her ekran boyutunda mükemmel görünen ve kullanımı kolay siteler geliştiriyoruz."
+      question: "Sosyal medya yönetimi hizmeti veriyor musunuz?",
+      answer: "Evet. İçerik planlama, görsel tasarım, haftalık/aylık paylaşım ve reklam yönetimi hizmetleri sunuyoruz."
     },
     {
-      question: "SEO çalışması yapıyor musunuz?",
-      answer: "Evet, tüm web sitelerimiz SEO'ya uygun olarak kodlanır ve temel SEO optimizasyonları yapılır. Ayrıca, daha kapsamlı SEO hizmetleri için özel paketlerimiz bulunmaktadır. İçerik optimizasyonu, anahtar kelime araştırması, teknik SEO ve düzenli raporlama ile arama motorlarında üst sıralarda yer almanıza yardımcı oluyoruz."
+      question: "Hizmetlerinizin fiyatları nedir?",
+      answer: "Hizmet fiyatlarımız, işletmenin ihtiyacına göre değişir. Bütçenize uygun teklifler sunmak için ücretsiz ön görüşme yapıyoruz."
+    },
+    {
+      question: "Web sitesi teslim süresi ne kadar?",
+      answer: "Standart bir web sitesi genellikle 5-7 iş günü içinde teslim edilir. Ekstra özellikler istenirse süre uzayabilir."
+    },
+    {
+      question: "Teknik destek sağlıyor musunuz?",
+      answer: "Evet. Teslim sonrası 1 yıl boyunca ücretsiz teknik destek sağlıyoruz."
+    },
+    {
+      question: "Sadece yerel esnafa mı hizmet veriyorsunuz?",
+      answer: "Hayır. Türkiye'nin her yerindeki işletmelere dijital çözümler sunuyoruz."
+    },
+    {
+      question: "Mevcut web sitemi geliştirebilir misiniz?",
+      answer: "Evet. Var olan web sitenizi güncelleyebilir, hızlandırabilir ve daha profesyonel hale getirebiliriz."
     }
   ];
 

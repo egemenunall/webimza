@@ -25,7 +25,7 @@ export default function HizmetlerPage() {
       <main id="main-content" className="pt-28">
         <h1 className="sr-only">Webimza Hizmetleri - Web Tasarımı, Chatbot ve Dijital Çözümler</h1>
         <section id="services-section" aria-labelledby="services-heading">
-          <Services />
+        <Services />
         </section>
         <section id="cta-section">
           <CallToAction />
