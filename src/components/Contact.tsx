@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -27,10 +28,21 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Burada gerçek bir form gönderimi yapılabilir
-    // Şimdilik sadece başarılı olduğunu simüle ediyoruz
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // EmailJS ile email gönder
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_webimza',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_webimza',
+        {
+          from_name: formData.name,
+          from_phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          to_email: 'info@webimza.com',
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'webimza_public_key'
+      );
+      
       setSubmitSuccess(true);
       
       // Form başarılı mesajını 5 saniye göster
@@ -43,7 +55,12 @@ export default function Contact() {
           message: '',
         });
       }, 5000);
-    }, 1500);
+    } catch (error) {
+      console.error('Email gönderme hatası:', error);
+      alert('Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

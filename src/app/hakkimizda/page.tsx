@@ -30,78 +30,70 @@ export default function HakkimizdaPage() {
         <About />
         </section>
         
-        {/* Tarihçemiz */}
-        <section id="history-section" className="py-16 bg-neutral/10" aria-labelledby="history-heading">
+        {/* Başarı Hikayelerimiz */}
+        <section id="success-stories-section" className="py-16 bg-neutral/10" aria-labelledby="success-stories-heading">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-3" style={{ backgroundColor: 'rgba(100, 130, 173, 0.1)', color: '#6482AD' }}>
-                Tarihçemiz
+                Başarı Hikayelerimiz
               </span>
-              <h2 id="history-heading" className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                Nasıl <span className="text-primary" style={{ color: '#6482AD' }}>Başladık</span>?
+              <h2 id="success-stories-heading" className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Müşterilerimizin <span className="text-primary" style={{ color: '#6482AD' }}>Başarıları</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-                Yolculuğumuzu, dijital dünyada işletmelere yardımcı olmak ve teknolojik çözümlerle fark yaratmak vizyonuyla başlattık.
+                Birlikte çalıştığımız markaların dijital dönüşüm süreçlerinde elde ettikleri başarılı sonuçlar.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="order-2 md:order-1">
-                <div className="mb-8">
-                  <div className="flex items-center mb-3">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-primary/10 text-primary mr-3" style={{ backgroundColor: 'rgba(100, 130, 173, 0.1)', color: '#6482AD' }} aria-hidden="true">
-                      <span className="font-semibold">01</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-800">Kuruluş Aşaması</h3>
-                  </div>
-                  <p className="text-gray-600 ml-12">
-                    2020 yılında, teknoloji tutkunları tarafından kurularak, işletmelere uygun maliyetli dijital çözümler sunmaya başladık.
-                  </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Başarı Hikayesi 1 */}
+              <div className="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6" style={{ backgroundColor: 'rgba(100, 130, 173, 0.1)' }} aria-hidden="true">
+                  <svg className="w-8 h-8 text-primary" style={{ color: '#6482AD' }} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                  </svg>
                 </div>
-                
-                <div className="mb-8">
-                  <div className="flex items-center mb-3">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-primary/10 text-primary mr-3" style={{ backgroundColor: 'rgba(100, 130, 173, 0.1)', color: '#6482AD' }} aria-hidden="true">
-                      <span className="font-semibold">02</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-800">Büyüme Dönemi</h3>
-                  </div>
-                  <p className="text-gray-600 ml-12">
-                    İlk projelerimizin başarısı, müşteri tabanımızı genişletmemize ve hizmet yelpazemizi büyütmemize olanak sağladı.
-                  </p>
-                </div>
-                
-                <div>
-                  <div className="flex items-center mb-3">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-primary/10 text-primary mr-3" style={{ backgroundColor: 'rgba(100, 130, 173, 0.1)', color: '#6482AD' }} aria-hidden="true">
-                      <span className="font-semibold">03</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-800">Bugün</h3>
-                  </div>
-                  <p className="text-gray-600 ml-12">
-                    Şu anda, en son teknolojileri kullanan ve müşterilerimize özel çözümler sunan güçlü bir ekip olarak çalışmalarımıza devam ediyoruz.
-                  </p>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">E-ticaret Başarısı</h3>
+                <p className="text-gray-600 mb-4">
+                  Geliştirdiğimiz e-ticaret platformu sayesinde müşterimizin online satışları 6 ayda %300 arttı.
+                </p>
+                <div className="flex items-center text-primary" style={{ color: '#6482AD' }}>
+                  <span className="text-2xl font-bold mr-2">%300</span>
+                  <span className="text-sm">Satış Artışı</span>
                 </div>
               </div>
               
-              <div className="order-1 md:order-2">
-                <div className="relative rounded-xl overflow-hidden shadow-xl">
-                  <Image
-                    src="https://images.unsplash.com/photo-1605143185675-a6ca8652e545?w=800"
-                    alt="Webimza gelişim süreci - ekibimiz bilgisayar başında çalışırken"
-                    width={600}
-                    height={400}
-                    sizes="(max-width: 768px) 100vw, 600px"
-                    className="w-full object-cover"
-                    loading="lazy"
-                    placeholder="blur"
-                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN88/HjfwAJhAOGcFmzwgAAAABJRU5ErkJggg=="
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <div className="p-6">
-                      <p className="text-white/80 text-lg">50+ Tamamlanan proje ve büyüyen portföyümüzle, müşterilerimize değer katmaya devam ediyoruz.</p>
-                    </div>
-                  </div>
+              {/* Başarı Hikayesi 2 */}
+              <div className="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6" style={{ backgroundColor: 'rgba(100, 130, 173, 0.1)' }} aria-hidden="true">
+                  <svg className="w-8 h-8 text-primary" style={{ color: '#6482AD' }} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">Hızlı Web Sitesi</h3>
+                <p className="text-gray-600 mb-4">
+                  Optimize ettiğimiz web sitesi sayesinde sayfa yükleme süreleri %75 azaldı ve kullanıcı deneyimi önemli ölçüde iyileşti.
+                </p>
+                <div className="flex items-center text-primary" style={{ color: '#6482AD' }}>
+                  <span className="text-2xl font-bold mr-2">%75</span>
+                  <span className="text-sm">Hız Artışı</span>
+                </div>
+              </div>
+              
+              {/* Başarı Hikayesi 3 */}
+              <div className="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6" style={{ backgroundColor: 'rgba(100, 130, 173, 0.1)' }} aria-hidden="true">
+                  <svg className="w-8 h-8 text-primary" style={{ color: '#6482AD' }} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">Müşteri Memnuniyeti</h3>
+                <p className="text-gray-600 mb-4">
+                  Geliştirdiğimiz CRM sistemi ile müşterimiz, müşteri memnuniyet oranını %95'e çıkardı ve iş süreçlerini optimize etti.
+                </p>
+                <div className="flex items-center text-primary" style={{ color: '#6482AD' }}>
+                  <span className="text-2xl font-bold mr-2">%95</span>
+                  <span className="text-sm">Memnuniyet</span>
                 </div>
               </div>
             </div>
